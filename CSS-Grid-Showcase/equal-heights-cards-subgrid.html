@@ -27,37 +27,67 @@
 body {
   display: grid;
   place-content: center;
+  justify-items: center;
 }
 
 main {
   display: grid;
   width: min(calc(100% - 2rem), 1280px);
-  grid-template-columns: 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-items: center;
 }
 
-article {
+article.card {
   border: 1px solid black; 
+  border-radius: 15px; 
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  justify-items: center;
+  margin: 0.5rem;
 }
 
 .main-img {
-  max-width: 300px; 
+  max-width: 100%; 
 }
 
+.headline {
+  color: #123B34;
+    text-align: center;
+    font-family: Erode;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128.5%;
+    text-transform: capitalize;
+    margin: 0 auto 30px;
+    position: relative;
+    padding-inline: 10px;
+}
 
+.content {
+  color: #123B34;
+    text-align: center;
+    font-family: Instrument Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 0 auto 50px;
+}
 
-  /* 
-  
-  use is, where, has + not and subgrid to make equal cards
-  
-  They will follow this pattern: 5x1 grid
+.author {
+  color: #123B34;
+    text-align: center;
+    font-family: Erode;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 27px;
+    margin: 0 auto;
+}
 
-  Image
-  Stars
-  Headline
-  Content
-  Author
-
-  */
 
 </style>
 
@@ -70,7 +100,6 @@ article {
       <p class="author">Coltan L.</p>
    </article>
    <article class="card">
-   <article class="card">
       <img class="main-img" src="https://naturespureblend.com/cdn/shop/files/Rectangle_47.png?v=1711559014">
       <img src="https://cdn.shopify.com/s/files/1/0266/0483/0829/files/star-rating.svg?v=1703659891" alt="" class="review-stars">
       <h3 class="headline">"This is what I take Daily"</h3>
@@ -80,11 +109,10 @@ article {
    <article class="card">
       <img class="main-img" src="https://naturespureblend.com/cdn/shop/files/Rectangle_47.png?v=1711559014">
       <img src="https://cdn.shopify.com/s/files/1/0266/0483/0829/files/star-rating.svg?v=1703659891" alt="" class="review-stars">
-      <h3 class="headline">"This is what I take Daily"</h3>
-      <p class="content">I take nitric oxide flow daily to help me reduce my blood pressure. Gives me that energy that I am looking for. I absolutely love this product and everything about it.</p>
+      <h3 class="headline">"Random long title goes here. I'm just typing and typing and typing a headline for demo purposes"</h3>
+      <p class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, minus. Recusandae earum pariatur, iure quasi sequi, maxime corrupti eveniet deleniti nisi natus mollitia voluptatum voluptatem esse perferendis laboriosam in voluptatibus.</p>
       <p class="author">Coltan L.</p>
    </article>
-   <article class="card">
 </main>
 </body>
 </html>
