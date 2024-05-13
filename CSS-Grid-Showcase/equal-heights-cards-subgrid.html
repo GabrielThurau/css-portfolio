@@ -9,16 +9,7 @@
 
 <style>
 
-  /* 
-  
-  use is, where, has + not and subgrid to make equal cards
-  
-  They will follow this pattern:
 
-  image image image
-  review review review
-
-  */
 
 *,
 *:after,
@@ -30,32 +21,71 @@
 *:after,
 *:before {
 	box-sizing: border-box;
+}
+
+/* for demo purposes. Convenient way to center content on page */
+body {
+  display: grid;
+  place-content: center;
 }
 
 main {
   display: grid;
+  width: min(calc(100% - 2rem), 1280px);
+  grid-template-columns: 
 }
 
 article {
   border: 1px solid black; 
 }
 
+.main-img {
+  max-width: 300px; 
+}
 
+
+
+  /* 
+  
+  use is, where, has + not and subgrid to make equal cards
+  
+  They will follow this pattern: 5x1 grid
+
+  Image
+  Stars
+  Headline
+  Content
+  Author
+
+  */
 
 </style>
 
 <main>
-<article class="card">
-
-</article>
-<article class="card">
-
-</article>
-<article class="card">
-
-</article>
+   <article class="card">
+      <img class="main-img" src="https://naturespureblend.com/cdn/shop/files/Rectangle_47.png?v=1711559014">
+      <img src="https://cdn.shopify.com/s/files/1/0266/0483/0829/files/star-rating.svg?v=1703659891" alt="" class="review-stars">
+      <h3 class="headline">"This is what I take Daily"</h3>
+      <p class="content">I take nitric oxide flow daily to help me reduce my blood pressure. Gives me that energy that I am looking for. I absolutely love this product and everything about it.</p>
+      <p class="author">Coltan L.</p>
+   </article>
+   <article class="card">
+   <article class="card">
+      <img class="main-img" src="https://naturespureblend.com/cdn/shop/files/Rectangle_47.png?v=1711559014">
+      <img src="https://cdn.shopify.com/s/files/1/0266/0483/0829/files/star-rating.svg?v=1703659891" alt="" class="review-stars">
+      <h3 class="headline">"This is what I take Daily"</h3>
+      <p class="content">I take nitric oxide flow daily to help me reduce my blood pressure. Gives me that energy that I am looking for. I absolutely love this product and everything about it.</p>
+      <p class="author">Coltan L.</p>
+   </article>
+   <article class="card">
+      <img class="main-img" src="https://naturespureblend.com/cdn/shop/files/Rectangle_47.png?v=1711559014">
+      <img src="https://cdn.shopify.com/s/files/1/0266/0483/0829/files/star-rating.svg?v=1703659891" alt="" class="review-stars">
+      <h3 class="headline">"This is what I take Daily"</h3>
+      <p class="content">I take nitric oxide flow daily to help me reduce my blood pressure. Gives me that energy that I am looking for. I absolutely love this product and everything about it.</p>
+      <p class="author">Coltan L.</p>
+   </article>
+   <article class="card">
 </main>
-  
 </body>
 </html>
 
