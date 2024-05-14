@@ -33,6 +33,7 @@ header {
     width: 98vw;
     margin: 0 auto; 
     border: 1px solid black; 
+    position: relative;
 
 }
 
@@ -47,25 +48,36 @@ header {
 }
 
 ul {
+    list-style-type: none;
+}
+
+ul:not(.secondary-menu) {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(85px, max-content));  */
    grid-template-columns: 1fr 1fr 1fr; 
-   list-style-type: none;
    gap: 1rem;
+  
+}
+
+ul.secondary-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px peachpuff solid;
+    display: grid;
+    width: min(calc(100% - 20rem), 1280px);
+    margin: 0 auto; 
+    justify-content: center;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    position: absolute;
+    top: 100%;
 }
 
 div.header-icons {
     display: flex;
     gap: 1rem;
-}
-
-nav.secondary-menu {
-    border: 1px peachpuff solid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 222px);
-    width: min(calc(100% - 20rem), 1080px);
-    margin: 0 auto; 
-    justify-content: center;
 }
 
 nav.secondary-menu > article {
@@ -91,7 +103,38 @@ nav.secondary-menu > article {
     <nav class="mega-menu-nav">
      <div class="nav-group-1">
         <ul class="nav-list-level-one">
-            <li class="nav-item"><a href="https://hiyahealth.com/products/kids-daily-essential">Shop</a></li>
+            <li class="nav-item"><a href="https://hiyahealth.com/products/kids-daily-essential">Shop</a>
+            <ul class="secondary-menu">
+                <li>
+                    <article class="product-card">
+                        <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/multivitamin_2.png?v=1697213973">
+                        <h3 class="product-title">Kids Daily Essential</h3>
+                        <p class="content">A daily chewable with 15 essential vitamins & minerals.</p>
+                      </article>
+                </li>
+                <li>
+                    <article class="product-card">
+                        <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/probiotic_2.png?v=1697213972">
+                        <h3 class="product-title">Kids Daily Probiotic</h3>
+                        <p class="content">A pediatrician formulated chewable with 10 billion CFUs.</p>
+                      </article>
+                </li>
+                <li>
+                    <article class="product-card">
+                        <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/bedtime_2.png?v=1697213972">
+                        <h3 class="product-title">Kids Bedtime Essentials</h3>
+                        <p class="content">A nightly chewable for a good night's rest with NO melatonin.</p>
+                      </article>
+                </li>
+                <li>
+                    <article class="product-card">
+                        <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya_iron_2-2.png?v=1711138125">
+                        <h3 class="product-title">Kids Daily Iron+</h3>
+                        <p class="content">A daily chewable with a unique form of iron gentle on kid's stomachs.</p>
+                      </article>
+                </li>
+            </ul>
+            </li>
             <li class="nav-item"><a href="https://hiyahealth.com/products/kids-daily-essential">Learn</a></li>
             <li class="nav-item"><a href="https://hiyahealth.com/products/kids-daily-essential">More</a></li>
         </ul>
@@ -108,28 +151,6 @@ nav.secondary-menu > article {
         <img src="https://cdn.shopify.com/s/files/1/0255/3249/8001/t/160/assets/hiya-cart.svg?v=7367011249459338271686327204" alt="">
      </div>
     </nav>
-    <nav class="secondary-menu">
-        <article class="product-card">
-          <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/multivitamin_2.png?v=1697213973">
-          <h3 class="product-title">Kids Daily Essential</h3>
-          <p class="content">A daily chewable with 15 essential vitamins & minerals.</p>
-        </article>
-        <article class="product-card">
-          <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/probiotic_2.png?v=1697213972">
-          <h3 class="product-title">Kids Daily Probiotic</h3>
-          <p class="content">A pediatrician formulated chewable with 10 billion CFUs.</p>
-        </article>
-        <article class="product-card">
-          <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/bedtime_2.png?v=1697213972">
-          <h3 class="product-title">Kids Bedtime Essentials</h3>
-          <p class="content">A nightly chewable for a good night's rest with NO melatonin.</p>
-        </article>
-        <article class="product-card">
-          <img class="main-img" src="https://cdn.shopify.com/s/files/1/0255/3249/8001/files/hiya_iron_2-2.png?v=1711138125">
-          <h3 class="product-title">Kids Daily Iron+</h3>
-          <p class="content">A daily chewable with a unique form of iron gentle on kid's stomachs.</p>
-        </article>
-      </nav>
     </div>
 </header>
 </body>
