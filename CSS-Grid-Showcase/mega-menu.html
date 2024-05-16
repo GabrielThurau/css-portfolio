@@ -62,7 +62,7 @@ ul:not(.secondary-menu) {
 ul.secondary-menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border: 1px peachpuff solid;
+    border: 2px #2376b4 solid;
     display: grid;
     width: min(calc(100% - 20rem), 1280px);
     margin: 0 auto; 
@@ -73,6 +73,10 @@ ul.secondary-menu {
     margin-right: auto; 
     position: absolute;
     top: 100%;
+    border-radius: 10px; 
+    padding: 2rem 1rem;
+    text-align: center;
+    visibility: hidden;
 }
 
 div.header-icons {
@@ -95,6 +99,14 @@ nav.secondary-menu > article {
     display: grid;
 }
 
+article.product-card {
+    padding: 0rem 1rem;
+}
+
+.shop-hover:has(:hover) > .secondary-menu {
+    visibility: visible; 
+}
+
 
 </style>
 
@@ -103,7 +115,7 @@ nav.secondary-menu > article {
     <nav class="mega-menu-nav">
      <div class="nav-group-1">
         <ul class="nav-list-level-one">
-            <li class="nav-item"><a href="https://hiyahealth.com/products/kids-daily-essential">Shop</a>
+            <li class="nav-item shop-hover"><a href="https://hiyahealth.com/products/kids-daily-essential">Shop</a>
             <ul class="secondary-menu">
                 <li>
                     <article class="product-card">
